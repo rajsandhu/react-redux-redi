@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-function App({ countReducer, multiplyReducer, dispatch }) {
+function App({ countReducer, multiplyReducer, divideReducer, dispatch }) {
   return (
     <div>
       <button onClick={() => dispatch({ type: "COUNT_UP" })}>
@@ -15,6 +15,10 @@ function App({ countReducer, multiplyReducer, dispatch }) {
         multiply by 10
       </button>
       <div>{multiplyReducer}</div>
+        <button onClick={() => dispatch({ type: "DIVIDE_BY_TEN" })}>
+            divide by 10
+        </button>
+        <div>{divideReducer}</div>
     </div>
   );
 }
